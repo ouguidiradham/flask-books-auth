@@ -1,7 +1,7 @@
 # Flask Books API with JWT Auth
 
 A REST API built with Python Flask, SQLite, and JWT authentication.
-**Live API:** https://adhamouguidir.pythonanywhere.com
+**Live API:** https://adhamouguidir.pythonanywhere.com/books
 
 ## Features
 - User registration and login
