@@ -1,10 +1,13 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
 import sqlite3
 from flask import Flask, jsonify, request
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.config ["JWT_SECRET_KEY"] = "secretkey"
+app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY", "secretkey")
 jwt = JWTManager(app)
 
 conn = sqlite3.connect("/Users/eaglefly/sqlite/books_auth.db")
